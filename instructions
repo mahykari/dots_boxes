@@ -1,0 +1,23 @@
+INSTRUCTIONS:
+SERVER: You don't need to give any instructions to server;
+just press CTRL+D whenever you want to shut it down.
+
+To run the server just type: ./server <port number>
+
+CLIENT: The CTRL+D format also works here, too (before running the player.)
+To run the client, do the following:
+    1. Type ./client <port number> in your terminal; 
+     This must be the same port number you used for running your server.
+    2. Type "set_match_size <a number between 2 and 4>" to be added to a match.
+     Your client will automatically change to player after a match is announced 
+     by the server.
+
+PLAYER: Each player has 30 seconds to make a move; We have excluded move checks as well,
+so be a little bit cautious about the move you enter.
+After a game is announced, your player will have an id which is also written in
+the server announcement. For making a move, write: 
+    wall id <player id> p1 <point1 row> <point1 column> <point2 row> <point2 column>
+Be careful to not draw a line which is already drawn;
+as this condition is not handled in our code. Also after each timer reset,
+The standard input buffer is not flushed; so your current move can be a consequence of
+your previous moves :).
