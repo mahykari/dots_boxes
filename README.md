@@ -1,6 +1,14 @@
 # Dots & Boxes
 The classic game, with sockets.
 
+# Features
+
+The game server is responsible for initiating matches
+and communicating with clients before they enter _player_ mode.
+
+After a match is announced from the server, players will communicate only with each other via UDP connections.
+All game logic is also handled by players.
+
 ## How to Run
 
 Make sure you are using Linux!
@@ -36,20 +44,31 @@ Run the following command to start the client:
 ./client <port number>
 ```
 
-CLIENT: The CTRL+D format also works here, too (before running the player.)
-To run the client, do the following:
-    1. Type  in your terminal; 
-     This must be the same port number you used for running your server.
-    2. Type "set_match_size <a number between 2 and 4>" to be added to a match.
-     Your client will automatically change to player after a match is announced 
-     by the server.
+To stop the client, press Ctrl+D (before _player_ mode begins).
 
-PLAYER: Each player has 30 seconds to make a move; We have excluded move checks as well,
+You can choose the number of players in your game with the following command:
+
+```
+set_match_size <a number between 2 and 4>
+```
+
+Your client will automatically change to _player_ mode after a match is announced by the server.
+You will also receive an identifier (from here on referred to as `id`),
+which you will need further in the game.
+
+In each round of the game, you have 30 seconds to play;
+your turn will be skipped if this time expires before your move.
+
+*Cation:* Move checks are not included,
 so be a little bit cautious about the move you enter.
-After a game is announced, your player will have an id which is also written in
-the server announcement. For making a move, write: 
-    wall id <player id> p1 <point1 row> <point1 column> <point2 row> <point2 column>
-Be careful to not draw a line which is already drawn;
-as this condition is not handled in our code. Also after each timer reset,
-The standard input buffer is not flushed; so your current move can be a consequence of
-your previous moves :).
+
+For drawing a wall in the game map, enter the following command: 
+```
+wall id <player id> p1 <point 1 row> <point 1 column> <point 2 row> <point 2 column>
+```
+
+Be careful to not draw a line which is already drawn!
+
+## Notes
+
+This project was assigned as part of the Operating Systems course at University of Tehran, Fall 2020.
