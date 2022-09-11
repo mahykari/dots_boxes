@@ -64,7 +64,7 @@ so be a little bit cautious about the move you enter.
 
 For drawing a wall in the game map, enter the following command: 
 ```
-wall id <player id> p1 <point 1 row> <point 1 column> <point 2 row> <point 2 column>
+wall id <player id> p1 <point 1 row> <point 1 column> p2 <point 2 row> <point 2 column>
 ```
 
 Be careful to not draw a line which is already drawn!
