@@ -59,7 +59,7 @@ which you will need further in the game.
 In each round of the game, you have 30 seconds to play;
 your turn will be skipped if this time expires before your move.
 
-*Cation:* Move checks are not included,
+**Caution:** Move checks are not supported,
 so be a little bit cautious about the move you enter.
 
 For drawing a wall in the game map, enter the following command: 
