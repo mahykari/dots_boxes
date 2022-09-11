@@ -71,4 +71,5 @@ Be careful to not draw a line which is already drawn!
 
 ## Notes
 
-This project was assigned as part of the Operating Systems course at University of Tehran, Fall 2020.
+1. This project was assigned as part of the Operating Systems course at University of Tehran, Fall 2020.
+2. As a consequence, everything in this project is implemented in pure C!
