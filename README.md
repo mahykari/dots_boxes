@@ -18,7 +18,7 @@ In addition, make sure you have `make` installed on your system.
 You can build this project as follows:
 
 ```
-git clone https://github.com/moyarka/dots_boxes # Or the SSH alternative
+git clone https://github.com/mahykari/dots_boxes # Or the SSH alternative
 cd dots_boxes/
 make
 ```
